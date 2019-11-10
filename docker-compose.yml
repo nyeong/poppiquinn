@@ -13,6 +13,8 @@ services:
   app:
     build: .
     restart: always
+    environment:
+      - IS_ON_DOCKER=true
     ports:
       - 3000:3000
     links:

@@ -4,7 +4,11 @@ const app = express();
 
 const User = require("./models/user");
 
-mongoose.connect("mongodb://mongo:27017/test", {
+const MONGODB_URL = process.env["IS_ON_DOCKER"]
+  ? "mongodb://mongo:27017/test"
+  : "mongodb://localhost:27017/test";
+
+mongoose.connect(MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
