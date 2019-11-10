@@ -13,4 +13,5 @@ services:
     links:
       - mongo
 
-volumes: catalram:
+volumes:
+  catalram: {}
