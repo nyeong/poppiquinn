@@ -49,7 +49,7 @@ app.post("/user/info", async (req, res) => {
 app.get("/user", async (req, res) => {
   try {
     const users = await User.find({}).exec();
-    console.log(users);
+    console.log("user all quried");
     res.send({ ok: "", users });
   } catch (err) {
     console.error(err);
