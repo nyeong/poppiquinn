@@ -7,6 +7,9 @@ services:
       - 27017:27017
     volumes:
       - catalram
+    networks:
+      - backend
+
   app:
     build: .
     restart: always
@@ -14,6 +17,12 @@ services:
       - 3000:3000
     links:
       - mongo
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
 
 volumes:
-  catalram: {}
+  catalram:
