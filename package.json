@@ -1,0 +1,22 @@
+{
+  "name": "poppiquinn",
+  "version": "1.0.0",
+  "description": "가톨릭대학교 가알람 백엔드 서버",
+  "main": "init.js",
+  "scripts": {
+    "start": "node init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyeong/poppiquinn.git"
+  },
+  "author": "eu calyptus, an nyeong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyeong/poppiquinn/issues"
+  },
+  "homepage": "https://github.com/nyeong/poppiquinn#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
