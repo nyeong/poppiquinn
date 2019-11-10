@@ -2,7 +2,7 @@ var express = require("express");
 var mongoose = require("mongoose");
 var app = express();
 
-mongoose.connect("mongodb://localhost/test", {
+mongoose.connect("mongodb://mongo:27017/test", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
