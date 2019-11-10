@@ -4,7 +4,7 @@
   "description": "가톨릭대학교 가알람 백엔드 서버",
   "main": "init.js",
   "scripts": {
-    "start": "node init.js"
+    "dev": "nodemon init.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/nyeong/poppiquinn#readme",
   "dependencies": {
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "mongoose": "^5.7.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
   }
 }

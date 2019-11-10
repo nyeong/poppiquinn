@@ -10,14 +10,22 @@
 
 ```
 {
-  phone: string,
+  phone: string, uniq,
   name: string,
   nickname: string,
   youPhone: string,
+  position: {
+    crawledAt: Timestamp,
+    lat: number,
+    lot: number,
+  }
 }
 ```
 
 ## API
+
+- POST `/user/new`, 신규 유저 생성
+- POST `/user/fetch`, 유저 위치 갱신
 
 ### GET '/user'
 
