@@ -13,7 +13,7 @@
   phone: string,
   name: string,
   nickname: string,
-  youPhone: User
+  youPhone: string,
 }
 ```
 
