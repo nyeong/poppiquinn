@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const User = require("./models/user");
 
 router.post("/user/info", async (req, res) => {
   let user = new User();
-  user.seq = req.body["seq"];
   user.phone = req.body["phone"];
   user.name = req.body["name"];
   user.nickname = req.body["nickname"];
@@ -15,7 +15,22 @@ router.post("/user/info", async (req, res) => {
     res.send({ ok: "user saved", user });
   } catch (err) {
     console.error(err);
-    res.send({ error: err });
+    res.status(401).send({ error: err });
+  }
+});
+
+router.post("/user/fetch", async (req, res) => {
+  try {
+    if (!req.body["lat"] || !req.body["lng"] || !req.body["phone"])
+      throw Error("NotEnoughParams");
+
+    const user = await User.find({ phone: req.body["phone"] }).exec();
+
+    if (!user) throw Error("UserNotFoundError");
+
+    res.send({ recallTime: 300 });
+  } catch (err) {
+    res.status(401).send({ error: err.message });
   }
 });
 

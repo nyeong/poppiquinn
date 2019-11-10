@@ -85,3 +85,33 @@
     }
 }
 ```
+
+### POST `/user/fetch`
+
+입력:
+
+```
+{
+  phone: string, # 전화번호
+  lng: float, # 경도
+  lat: float, # 위도
+}
+```
+
+출력:
+
+```
+{
+  ok: {
+    recallTime: Second
+  }
+}
+```
+
+```
+{
+  error: {
+    message: string
+  }
+}
+```
