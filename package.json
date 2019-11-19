@@ -2,8 +2,9 @@
   "name": "poppiquinn",
   "version": "1.0.0",
   "description": "가톨릭대학교 가알람 백엔드 서버",
-  "main": "init.js",
+  "main": "./lib/poppiquinn.js",
   "scripts": {
+    "start": "node ./lib/poppiquinn.js",
     "dev": "nodemon init.js"
   },
   "repository": {
