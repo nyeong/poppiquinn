@@ -19,6 +19,7 @@
   "homepage": "https://github.com/nyeong/poppiquinn#readme",
   "dependencies": {
     "connect-mongo": "^3.1.2",
+    "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
